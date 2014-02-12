@@ -1,0 +1,66 @@
+@import "library";
+@import "reset";
+
+// Global templates
+
+%group:after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+%container {
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+// Global tags
+
+body {
+    background: pink;
+}
+
+a {
+    color: #800000;
+}
+
+// Everything else
+
+.month {
+  display: table;
+  font-family: "Helvetica Neue";
+  .week {
+    display: table-row;
+    .day {
+      display: table-cell;
+      border: 1px solid black;
+      width: 170px;
+      height: 100px;
+      font-size: 12px;
+      .date {
+        text-align: right;
+      }
+      .event_title {
+        font-size: 16px;
+      }
+      .mobile {
+        display: none;
+        .event_time {
+          font-size: 14px;
+        }
+        .tags {
+          display: inline-block;
+          background-color: black;
+          color: white;
+          margin-right: 2px;
+        }
+      }
+    }
+    .label {
+      display: table-cell;
+      border: 1px solid black;
+      width: 170px;
+      height: 20px;
+    }
+  }
+}
