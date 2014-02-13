@@ -56,6 +56,11 @@ table {
 }
 
 body {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+body {
   background: white;
 }
 
@@ -71,6 +76,7 @@ a {
   font-size: 30px;
   font-weight: bold;
   border-bottom: 1px solid black;
+  margin: 20px 0px;
 }
 .month .label {
   display: none;
