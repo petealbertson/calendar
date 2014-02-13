@@ -17,7 +17,7 @@
 // Global tags
 
 body {
-    background: pink;
+    background: white;
 }
 
 a {
@@ -26,9 +26,72 @@ a {
 
 // Everything else
 
+// MOBILE STYLE
+.month {
+  font-family: "Helvetica Neue";
+  h2 {
+    display: block;
+    font-size: 30px;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+  }
+  .label {
+    display: none;
+  }
+  .day {
+    display: none;
+    .date {
+      font-size: 18px;
+      font-weight: lighter;
+      display: inline-block;
+    }
+    .day_of_week {
+      display: inline-block;
+    }
+  }
+  .mobile {
+    display: block;
+    .event {
+      border-bottom: 1px solid gray;
+      .event_time {
+        font-size: 14px;
+      }
+      .event_title {
+        display: inline-block;
+        a {
+          text-decoration: none;
+          color: black;
+          font-weight: bold;
+        }
+      }
+      .location {
+        display: inline-block;
+        &:before {
+          content: "@ "
+        }
+      }
+      .tags {
+        border: 1px solid gray;
+        display: inline-block;
+        font-weight: lighter;
+        font-style: italic;
+        padding: 1px;
+      }
+    }
+  }
+}
+
+
+// DESKTOP STYLE
+@media screen and (min-width: 600px) {
+
+
 .month {
   display: table;
   font-family: "Helvetica Neue";
+  h2 {
+    border: none;
+  }
   .week {
     display: table-row;
     .day {
@@ -40,8 +103,26 @@ a {
       .date {
         text-align: right;
       }
-      .event_title {
-        font-size: 16px;
+      .day_of_week {
+        display: none;
+      }
+      .event {
+        border: none;
+        .event_title {
+          font-size: 16px;
+          a {
+            font-weight: normal;
+          }
+          .adult {
+            color: red;
+          }
+          .kids {
+            color: green;
+          }
+          .personal {
+            color: blue;
+          }
+        }
       }
       .mobile {
         display: none;
@@ -63,4 +144,5 @@ a {
       height: 20px;
     }
   }
+}
 }

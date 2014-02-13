@@ -56,7 +56,7 @@ table {
 }
 
 body {
-  background: pink;
+  background: white;
 }
 
 a {
@@ -64,40 +64,117 @@ a {
 }
 
 .month {
-  display: table;
   font-family: "Helvetica Neue";
 }
-.month .week {
-  display: table-row;
+.month h2 {
+  display: block;
+  font-size: 30px;
+  font-weight: bold;
+  border-bottom: 1px solid black;
 }
-.month .week .day {
-  display: table-cell;
-  border: 1px solid black;
-  width: 170px;
-  height: 100px;
-  font-size: 12px;
-}
-.month .week .day .date {
-  text-align: right;
-}
-.month .week .day .event_title {
-  font-size: 16px;
-}
-.month .week .day .mobile {
+.month .label {
   display: none;
 }
-.month .week .day .mobile .event_time {
+.month .day {
+  display: none;
+}
+.month .day .date {
+  font-size: 18px;
+  font-weight: lighter;
+  display: inline-block;
+}
+.month .day .day_of_week {
+  display: inline-block;
+}
+.month .mobile {
+  display: block;
+}
+.month .mobile .event {
+  border-bottom: 1px solid gray;
+}
+.month .mobile .event .event_time {
   font-size: 14px;
 }
-.month .week .day .mobile .tags {
+.month .mobile .event .event_title {
   display: inline-block;
-  background-color: black;
-  color: white;
-  margin-right: 2px;
 }
-.month .week .label {
-  display: table-cell;
-  border: 1px solid black;
-  width: 170px;
-  height: 20px;
+.month .mobile .event .event_title a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.month .mobile .event .location {
+  display: inline-block;
+}
+.month .mobile .event .location:before {
+  content: "@ ";
+}
+.month .mobile .event .tags {
+  border: 1px solid gray;
+  display: inline-block;
+  font-weight: lighter;
+  font-style: italic;
+  padding: 1px;
+}
+
+@media screen and (min-width: 600px) {
+  .month {
+    display: table;
+    font-family: "Helvetica Neue";
+  }
+  .month h2 {
+    border: none;
+  }
+  .month .week {
+    display: table-row;
+  }
+  .month .week .day {
+    display: table-cell;
+    border: 1px solid black;
+    width: 170px;
+    height: 100px;
+    font-size: 12px;
+  }
+  .month .week .day .date {
+    text-align: right;
+  }
+  .month .week .day .day_of_week {
+    display: none;
+  }
+  .month .week .day .event {
+    border: none;
+  }
+  .month .week .day .event .event_title {
+    font-size: 16px;
+  }
+  .month .week .day .event .event_title a {
+    font-weight: normal;
+  }
+  .month .week .day .event .event_title .adult {
+    color: red;
+  }
+  .month .week .day .event .event_title .kids {
+    color: green;
+  }
+  .month .week .day .event .event_title .personal {
+    color: blue;
+  }
+  .month .week .day .mobile {
+    display: none;
+  }
+  .month .week .day .mobile .event_time {
+    font-size: 14px;
+  }
+  .month .week .day .mobile .tags {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    margin-right: 2px;
+  }
+  .month .week .label {
+    display: table-cell;
+    border: 1px solid black;
+    width: 170px;
+    height: 20px;
+  }
 }
