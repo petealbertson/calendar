@@ -43,6 +43,7 @@ a {
   .day {
     display: none;
     .date {
+      text-align: left;
       font-size: 18px;
       font-weight: lighter;
       display: inline-block;
@@ -114,19 +115,20 @@ a {
       }
       .event {
         border: none;
+        margin-bottom: 4px;
         .event_title {
           font-size: 16px;
           a {
             font-weight: normal;
           }
           .adult {
-            color: red;
+            border-bottom: 2px solid red;
           }
           .kids {
-            color: green;
+            border-bottom: 2px solid green;
           }
           .personal {
-            color: blue;
+            border-bottom: 2px solid blue;
           }
         }
       }
